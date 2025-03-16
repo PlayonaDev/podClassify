@@ -22,6 +22,8 @@ Podcasts feito em vídeo
 
 ## Como vou implementar:
 
+GET: retorna lista de episódios
+
 Vou retorna em uma API REST (json) o nome do podcast, nome do podcast,
 nome do episódio, imagem de capa, link e categoria.
 
