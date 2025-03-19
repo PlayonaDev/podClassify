@@ -49,3 +49,5 @@ nome do episódio, imagem de capa, link e categoria.
   },
 ];
 ```
+
+GET: retorna lista de episódios por parametro enviado pelo usuário

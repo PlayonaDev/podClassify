@@ -1,12 +1,26 @@
 import * as http from 'http';
-import { getListEpisodes } from './controllers/iscasts-controllers'
+import { getFilterEpisodes, getListEpisodes } from './controllers/iscasts-controllers'
 
-const server = http.createServer(async (req: http.IncomingMessage, res: http.ServerResponse) => {
+const server = http.createServer(async (
+    req: http.IncomingMessage,
+    res: http.ServerResponse) => {
 
-    if (req.method === 'GET') {
-        await getListEpisodes(req, res)
+    const [baseUrl, queryString] = req.url?.split('?') ?? ["", ""];
+
+    console.log(baseUrl)
+    console.log(queryString)
+
+    if (req.method === 'GET' && baseUrl === '/api/list') {
+        await getListEpisodes(req, res);
     }
-})
+
+    if (req.method === 'GET' && baseUrl === '/api/episode') {
+        {
+            await getFilterEpisodes(req, res);
+        }
+    }
+}
+)
 
 const port = process.env.PORT
 
