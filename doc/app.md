@@ -19,6 +19,7 @@ Podcasts feito em vídeo
 #### Feature:
 
 - Listar os episódios podcasts em sessões de categorias
+- Cria playlist de episodeos
 
 ## Como vou implementar:
 
@@ -51,3 +52,9 @@ nome do episódio, imagem de capa, link e categoria.
 ```
 
 GET: retorna lista de episódios por parametro enviado pelo usuário
+
+
+POST: criar playlist de podcasts
+- Retornando título da playlist;
+- Criar array de vídeos para salvar;
+- 
